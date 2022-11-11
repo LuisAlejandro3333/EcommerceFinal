@@ -1,0 +1,213 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: #e0e0e0;
+	color: #1d1d1d;
+    min-height: 100%;
+}
+
+.contenedor, .contenedorInicio{
+	width: 90%;
+	max-width: 1000px;
+	margin: 80px auto 100px auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 40px;
+}
+
+.lista-compras{
+	width: 90%;
+	margin: 80px auto 100px auto;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 40px;
+}
+
+.contenedorInicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contenedor .productos {
+	text-align: center;
+}
+
+.contenedor .productos .titulo {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.contenedor .productos .poster {
+	width: 100%;
+	height: 49%;    
+	max-width: 200px;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}
+
+.paginacion {
+	position: fixed;
+	background: #2e783f;
+	width: 100%;
+	display: flex;
+	gap: 20px;
+	padding: 10px;
+}
+
+.encabezado{
+	grid-area: header;
+    background: linear-gradient(to right, #2e783f, #4ed76d);
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 20px;
+    grid-template-areas: "logo search buttons";
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 60px;
+}
+
+.encabezado .logo-container {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+}
+
+.encabezado .buttons-container {
+	margin-right: 20px;
+    grid-area: buttons;
+    display: flex;
+    align-items: center;
+	height: 50px;
+}
+
+.encabezado{
+	top: 0;
+}
+
+.paginacion{
+	bottom: 0;
+	justify-content: center;
+}
+
+img.btnCarrito {
+	left: 0;
+    height: 50px;
+}
+.paginacion button, .encabezado button {
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 50px;
+	width: 200px;
+	background: #28a745;
+	color: #fff;
+	border-radius: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	transition: .3s ease all;
+}
+
+
+/* css para poner el texto del precio de un tamaño de 13px y un color rojo */
+p.price {
+    font-size: 13px;
+    color: #a35151;
+}
+
+/* nos permite esconder un elemento */
+.hidden{
+    display: none !important;
+}
+
+/* css para nuestra imagen del incio */
+img.inicio {
+    position: absolute;
+    top: 70px;
+    z-index: -1;
+    width: 100%;
+}
+
+.logo{
+	grid-area: logo;
+    display: flex;
+    align-items: center;
+}
+
+.contenedorCarrito {
+    margin-top: 80px;
+}
+
+.contenedorCarrito {
+    display: flex;
+    justify-content: center;
+}
+
+.tittle {
+    text-align: center;
+    position: absolute;
+}
+
+button.deleteButton {
+    margin-left: 10px;
+	background-color: #28a745;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    border: solid 2px #979797;
+	height: 48px;
+}
+
+button.deleteButton {
+    padding: 2px;
+}
+
+button.comprar {
+	padding: 4px;
+}
+
+h3.titulo {
+    height: 76px;
+}
+
+div#total {
+    font-size: 50px;
+}
+
+/* efectos de pasar el mouse por encima (hover) */
+
+button#btnInicio:hover {
+    font-size: 20px;
+    opacity: 1;
+}
+
+button.deleteButton:hover {
+    background-color: #c9c9c9;
+}
+
+.paginacion button:hover, .encabezado button:hover, img.buttons-container:hover {
+	opacity: 0.75;
+}
+#numProducts{
+	position: absolute;
+    font-weight: bold;
+    border: solid 2px white;
+    right: 10px;
+    border-radius: 15px;
+    padding: 0px 7px;
+    background: #44ba2e;
+    color: #fff;
+}

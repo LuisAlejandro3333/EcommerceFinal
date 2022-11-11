@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<title>Tu Tienda Online</title>
+
+    <!-- para poder usar boostrap para el boton del carrito -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="encabezado">
+        <button class="logo-container" id="btnInicio"> Tu Tienda Online </button>
+        <img class="buttons-container" id="btnCarrito" src="img/carrito.png">
+        <span class="" id="numProducts">0</span>
+    </div>
+
+    <input type="hidden" id="limit" value="0">
+    <div id="contenedorTienda">
+        <div id="contenedorML" class='hidden'>
+            <div class="contenedor" id="contenidoML"></div>
+        </div>
+
+        <div id="contenedorHardCode" class='hidden'>
+            <div class="contenedor" id="contenidoHC"></div>
+        </div>
+
+        <div class="paginacion">
+            <button id="btnPrev"> Anterior </button>
+            <button id="btnNext"> Siguiente </button>
+        </div>
+    </div>
+
+    <div id="contenedorCarrito" class="contenedorCarrito hidden">
+        <h2 class="tittle">Lista de compras</h2><br>
+        <span id="lista-compras" class="lista-compras"></span>
+        <div class="paginacion">
+            <div id="total" style="color:white"></div>
+        </div>
+        
+    </div>
+
+	<script src="app.js"></script>
+    <script src="appListaCompra.js"></script> 
+</body>
+</html>
